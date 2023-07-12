@@ -11,8 +11,17 @@ def main():
 
     with st.sidebar:
         st.subheader("Your documents")
-        st.file_uploader("Upload your PDFs here and click 'Process'")
-        st.button("Process")
+        pdf_docs = st.file_uploader(
+            "Upload your PDFs here and click 'Process'", accept_multiple_files=True
+        )
+        if st.button("Process"):
+            with st.spinner("Processing"):
+                # get pdf text
+                print("hello")
+
+                # get the text chunks
+
+                # create vector store
 
 
 if __name__ == "__main__":
